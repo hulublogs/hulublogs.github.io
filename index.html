@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activate Hulu — hulu.com/activate Guide for Every Device</title>
+<meta name="description" content="Pair your streaming device with Hulu in under two minutes. Step-by-step activation for Roku, Smart TV, Xbox, PlayStation, Fire TV and mobile.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#1CE783;
+    --green-deep:#0F9A5B;
+    --black:#0B0C0F;
+    --panel:#141519;
+    --line:#25272E;
+    --off-white:#F5F6F3;
+    --grey:#8B8F98;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--black);
+    color:var(--off-white);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.eyebrow{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;}
+
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:22px 6vw;
+    border-bottom:1px solid var(--line);
+  }
+  .logo{
+    font-weight:700;font-size:1.15rem;letter-spacing:-0.02em;
+    display:flex;align-items:center;gap:8px;
+  }
+  .logo .dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 12px var(--green);}
+  .topbar span.tag{
+    font-size:.75rem;color:var(--grey);
+    border:1px solid var(--line);padding:5px 10px;border-radius:20px;
+  }
+
+  .hero{
+    padding:9vh 6vw 8vh;
+    display:grid;grid-template-columns:1.1fr 1fr;gap:60px;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    color:var(--green);font-size:.8rem;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:22px;height:1px;background:var(--green);}
+  .hero h1{
+    font-size:clamp(2.2rem,4.4vw,3.6rem);
+    line-height:1.05;font-weight:700;letter-spacing:-0.02em;
+    margin-bottom:22px;
+  }
+  .hero h1 em{color:var(--green);font-style:normal;}
+  .hero p.lead{
+    color:var(--grey);font-size:1.05rem;max-width:46ch;margin-bottom:34px;
+  }
+  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;font-size:.92rem;
+    padding:14px 24px;border-radius:8px;
+    cursor:pointer;border:1px solid transparent;
+    transition:transform .15s ease, background .15s ease;
+    text-decoration:none;display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn-primary{background:var(--green);color:var(--black);}
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{border-color:var(--line);color:var(--off-white);}
+  .btn-ghost:hover{border-color:var(--grey);}
+
+  .pair-visual{
+    position:relative;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:16px;
+    padding:36px;
+    display:flex;align-items:center;justify-content:space-between;
+    min-height:220px;
+    overflow:hidden;
+  }
+  .device-node{
+    width:74px;height:74px;border-radius:14px;
+    background:#1A1C21;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;position:relative;z-index:2;
+    flex-shrink:0;
+  }
+  .hulu-node{
+    width:auto;min-width:74px;padding:0 16px;
+    background:var(--green);border-color:var(--green);
+    color:var(--black);font-family:'Space Grotesk',sans-serif;
+    font-weight:700;font-size:1.15rem;letter-spacing:-0.02em;
+    text-transform:lowercase;
+  }
+  .pair-track{
+    flex:1;height:2px;background:var(--line);
+    position:relative;margin:0 18px;
+  }
+  .pair-pulse{
+    position:absolute;top:50%;left:0;
+    width:10px;height:10px;margin-top:-5px;
+    background:var(--green);border-radius:50%;
+    box-shadow:0 0 14px var(--green);
+    animation:travel 2.6s ease-in-out infinite;
+  }
+  @keyframes travel{
+    0%{left:0;opacity:0;}
+    10%{opacity:1;}
+    90%{opacity:1;}
+    100%{left:calc(100% - 10px);opacity:0;}
+  }
+  .code-chip{
+    position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+    background:var(--black);border:1px dashed var(--green-deep);
+    color:var(--green);font-family:'Space Grotesk',sans-serif;
+    font-weight:600;letter-spacing:.01em;font-size:.8rem;
+    padding:6px 14px;border-radius:20px;white-space:nowrap;
+  }
+  .pair-caption{
+    position:absolute;top:16px;left:50%;transform:translateX(-50%);
+    font-size:.72rem;color:var(--grey);letter-spacing:.08em;text-transform:uppercase;
+  }
+
+  .flow{padding:9vh 6vw;border-bottom:1px solid var(--line);}
+  .flow-head{max-width:60ch;margin-bottom:44px;}
+  .flow-head h2{font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:12px;}
+  .flow-head p{color:var(--grey);}
+
+  .tabs{
+    display:flex;gap:10px;flex-wrap:wrap;margin-bottom:36px;
+    border-bottom:1px solid var(--line);padding-bottom:20px;
+  }
+  .tab{
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:.88rem;
+    padding:10px 18px;border-radius:8px;border:1px solid var(--line);
+    background:transparent;color:var(--grey);cursor:pointer;
+    transition:all .15s ease;
+  }
+  .tab.active{background:var(--green);color:var(--black);border-color:var(--green);}
+  .tab:hover:not(.active){border-color:var(--grey);color:var(--off-white);}
+
+  .steps-panel{display:none;}
+  .steps-panel.active{display:grid;grid-template-columns:44px 1fr;gap:0 22px;}
+  .step{display:contents;}
+  .step .num{
+    font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--green);
+    font-size:1rem;padding-top:2px;
+  }
+  .step .body{
+    border-left:1px solid var(--line);
+    padding:0 0 34px 22px;margin-left:-1px;
+    position:relative;
+  }
+  .step:last-child .body{border-color:transparent;padding-bottom:0;}
+  .step .body::before{
+    content:"";position:absolute;left:-5px;top:2px;
+    width:9px;height:9px;border-radius:50%;
+    background:var(--black);border:2px solid var(--green);
+  }
+  .step h3{font-size:1.02rem;font-weight:600;margin-bottom:6px;}
+  .step p{color:var(--grey);font-size:.94rem;max-width:56ch;}
+  .step .kbd{
+    display:inline-block;margin-top:10px;
+    background:var(--panel);border:1px solid var(--line);
+    color:var(--green);font-family:'Space Grotesk',sans-serif;
+    font-size:.82rem;padding:4px 10px;border-radius:6px;
+  }
+
+  .faq{padding:9vh 6vw;}
+  .faq h2{font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:36px;}
+  .faq-item{border-top:1px solid var(--line);}
+  .faq-item:last-child{border-bottom:1px solid var(--line);}
+  .faq-q{
+    width:100%;text-align:left;background:none;border:none;color:var(--off-white);
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:1rem;
+    padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;
+  }
+  .faq-q .plus{color:var(--green);font-size:1.2rem;transition:transform .2s ease;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease;color:var(--grey);font-size:.94rem;}
+  .faq-item.open .faq-a{max-height:200px;padding-bottom:20px;}
+
+  footer{
+    padding:34px 6vw;border-top:1px solid var(--line);
+    color:var(--grey);font-size:.8rem;text-align:center;
+  }
+
+  @media(max-width:820px){
+    .hero{grid-template-columns:1fr;padding-top:6vh;}
+    .steps-panel.active{grid-template-columns:30px 1fr;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .pair-pulse{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="logo"><span class="dot"></span> Hulu.com/activate</div>
+</div>
+
+<section class="hero">
+  <div>
+    <div class="eyebrow">Device pairing guide</div>
+    <h1>Get your screen talking to your account in <em>one code.</em></h1>
+    <p class="lead">Every Hulu-ready device shows a short activation code. Enter it at hulu.com/activate and the two are linked for good. Pick your device below to see the exact steps.</p>
+    <div class="hero-ctas">
+      <a href="https://flosyr.com/?GDp1UkctEvJlKbhCuy4wi0KAn8dtncnQbw5plr5JvHanmKXrLJl8x8koUcOyBaoboFqTwR9ufmskd58JqOkPmoMCa6lYakiXR35BXMl6iMPM5t5We6hJM" class="btn btn-primary">Click To Continue</a>
+      <a href="#faq" class="btn btn-ghost">Common questions</a>
+    </div>
+  </div>
+
+  <div class="pair-visual">
+    <span class="pair-caption">Pairing with Hulu</span>
+    <div class="device-node hulu-node">hulu</div>
+    <div class="pair-track"><div class="pair-pulse"></div></div>
+    <div class="device-node">📺</div>
+    <span class="code-chip">hulu.com/activate</span>
+  </div>
+</section>
+
+<section class="flow" id="flow">
+  <div class="flow-head">
+    <h2>Choose your device</h2>
+    <p>Steps take about two minutes. Your device and your browser need to be on the same Hulu account.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="roku">Roku</button>
+    <button class="tab" data-tab="smarttv">Smart TV</button>
+    <button class="tab" data-tab="xbox">Xbox</button>
+    <button class="tab" data-tab="ps">PlayStation</button>
+    <button class="tab" data-tab="firetv">Fire TV</button>
+    <button class="tab" data-tab="mobile">Mobile / Tablet</button>
+  </div>
+
+  <div class="steps-panel active" data-panel="roku">
+    <div class="step"><div class="num">01</div><div class="body"><h3>Install the app</h3><p>From the Roku home screen, open the Channel Store, search "Hulu," and add it.</p></div></div>
+    <div class="step"><div class="num">02</div><div class="body"><h3>Open Hulu on the Roku</h3><p>Launch the app. It displays a one-time activation code on screen.</p><span class="kbd">e.g. A1B2C3</span></div></div>
+    <div class="step"><div class="num">03</div><div class="body"><h3>Go to hulu.com/activate</h3><p>On your phone or computer, open a browser and visit the activation page.</p></div></div>
+    <div class="step"><div class="num">04</div><div class="body"><h3>Sign in and enter the code</h3><p>Log in to your Hulu account, type the code, and confirm. Your Roku switches to your home screen automatically.</p></div></div>
+  </div>
+
+  <div class="steps-panel" data-panel="smarttv">
+    <div class="step"><div class="num">01</div><div class="body"><h3>Open your TV's app store</h3><p>Works the same way on Samsung, LG, Vizio, and Android TV.</p></div></div>
+    <div class="step"><div class="num">02</div><div class="body"><h3>Download and launch Hulu</h3><p>The app shows a short code once it loads.</p></div></div>
+    <div class="step"><div class="num">03</div><div class="body"><h3>Visit the activation page</h3><p>Go to hulu.com/activate on a second device.</p></div></div>
+    <div class="step"><div class="num">04</div><div class="body"><h3>Enter the code and confirm</h3><p>Sign in, type the code shown on your TV, and the pairing completes instantly.</p></div></div>
+  </div>
+
+  <div class="steps-panel" data-panel="xbox">
+    <div class="step"><div class="num">01</div><div class="body"><h3>Search the Microsoft Store</h3><p>Find "Hulu" and install it on your Xbox.</p></div></div>
+    <div class="step"><div class="num">02</div><div class="body"><h3>Launch the app</h3><p>Your Xbox displays a unique activation code.</p></div></div>
+    <div class="step"><div class="num">03</div><div class="body"><h3>Go to hulu.com/activate</h3><p>Open the page in any browser, on any device.</p></div></div>
+    <div class="step"><div class="num">04</div><div class="body"><h3>Sign in and link it</h3><p>Enter the code, confirm, and your Xbox is ready to stream.</p></div></div>
+  </div>
+
+  <div class="steps-panel" data-panel="ps">
+    <div class="step"><div class="num">01</div><div class="body"><h3>Open the PlayStation Store</h3><p>Search "Hulu" and download the app to your PS4 or PS5.</p></div></div>
+    <div class="step"><div class="num">02</div><div class="body"><h3>Launch Hulu</h3><p>An activation code appears on your screen.</p></div></div>
+    <div class="step"><div class="num">03</div><div class="body"><h3>Visit hulu.com/activate</h3><p>Use your phone or computer's browser.</p></div></div>
+    <div class="step"><div class="num">04</div><div class="body"><h3>Sign in and enter the code</h3><p>Confirm, and your console pairs with your account.</p></div></div>
+  </div>
+
+  <div class="steps-panel" data-panel="firetv">
+    <div class="step"><div class="num">01</div><div class="body"><h3>Find Hulu in the Fire TV store</h3><p>Search, then select "Get" to install.</p></div></div>
+    <div class="step"><div class="num">02</div><div class="body"><h3>Open the app</h3><p>A short activation code appears on screen.</p></div></div>
+    <div class="step"><div class="num">03</div><div class="body"><h3>Go to hulu.com/activate</h3><p>Open the page on another device.</p></div></div>
+    <div class="step"><div class="num">04</div><div class="body"><h3>Sign in and confirm</h3><p>Enter the code — your Fire TV is now activated.</p></div></div>
+  </div>
+
+  <div class="steps-panel" data-panel="mobile">
+    <div class="step"><div class="num">01</div><div class="body"><h3>Install the Hulu app</h3><p>Download it from the App Store or Google Play.</p></div></div>
+    <div class="step"><div class="num">02</div><div class="body"><h3>Sign in directly</h3><p>Most phones and tablets log in with your account — no code needed.</p></div></div>
+    <div class="step"><div class="num">03</div><div class="body"><h3>If a code appears</h3><p>Some tablets show one. Visit hulu.com/activate on a browser to enter it.</p></div></div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Common questions</h2>
+
+  <div class="faq-item open">
+    <button class="faq-q">My code expired before I entered it — what now?<span class="plus">+</span></button>
+    <div class="faq-a">Codes are time-limited. Reopen the Hulu app on your device to generate a fresh one, then try again.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Can I activate more than one device?<span class="plus">+</span></button>
+    <div class="faq-a">Yes. Repeat the same steps on each device — every one gets its own activation code.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">Do I need a separate account for each device?<span class="plus">+</span></button>
+    <div class="faq-a">No. One Hulu account can be signed in across your supported devices.</div>
+  </div>
+  <div class="faq-item">
+    <button class="faq-q">The activation page won't accept my code.<span class="plus">+</span></button>
+    <div class="faq-a">Double-check for mixed-up characters like 0/O or 1/I, and make sure you're signed in to the right account.</div>
+  </div>
+</section>
+
+<footer>
+  Independent, unofficial setup guide. Not affiliated with, endorsed by, or connected to Hulu or The Walt Disney Company.
+</footer>
+
+<script>
+  const tabs = document.querySelectorAll('.tab');
+  const panels = document.querySelectorAll('.steps-panel');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.querySelector(`.steps-panel[data-panel="${tab.dataset.tab}"]`).classList.add('active');
+    });
+  });
+
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-q').addEventListener('click', () => {
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if(!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>
